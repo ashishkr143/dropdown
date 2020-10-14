@@ -13,7 +13,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="App">
-      <Button opt={1} toggleMenu={this.toggleMenu}></Button>
+      <Button toggleMenu={this.toggleMenu}></Button>
       {this.state.showMenu ?  <SearchBox></SearchBox> : ''}
      
   </div>
