@@ -1,7 +1,263 @@
-body{
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
   background-color: #eee;
 }
-.App{
+
+.App {
   padding: 20px;
   max-width: 500px;
 }
+
+nav {
+  height: 60px;
+  padding: 0 5%;
+  background-color: #1574F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-left .brand {
+  color: #fff;
+  font-weight: 600;
+}
+
+.body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+}
+
+.left {
+  padding: 50px 20px;
+  background-color: #ffff;
+  margin: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left .image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.left .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.left h1 {
+  margin-top: 20px;
+  font-weight: 200;
+  font-size: 40px;
+  text-align: center;
+}
+
+.left h4 {
+  font-weight: 200;
+  color: #676767;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.left h5 {
+  margin-top: 10px;
+}
+
+.left p {
+  margin-top: 40px;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.middle {
+  padding: 20px;
+  background-color: #ffff;
+  margin: 10px;
+}
+
+.middle h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.middle .bucket {
+  margin-top: 20px;
+}
+
+.bucket-item {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bucket-item .image {
+  max-width: 100px;
+  width: 100%;
+  max-height: 100px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.bucket-item .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bucket-item .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bucket-item .content .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.bucket-item .content .top h2 {
+  font-weight: 700;
+  color: #3B4F60;
+  font-size: 18px;
+}
+
+.bucket-item .content .top h6 {
+  color: #f66f15;
+}
+
+.bucket-item .content .dsc {
+  font-size: 12px;
+  line-height: 20px;
+  color: #aaa;
+}
+
+.bucket-item .content .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 13px;
+  color: #3B4F60;
+}
+
+.bucket-item .content .bottom div {
+  margin-left: 15px;
+}
+
+.right {
+  padding: 50px 20px;
+  background-color: #ffff;
+  margin: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.right h6 {
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.right .btn {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.right .bucket-item {
+  padding: 10px;
+}
+
+.right .bucket-item .top {
+  margin-bottom: 0;
+}
+
+.right .bucket-item .image {
+  height: 60px;
+  width: 60px;
+}
+
+.btn {
+  background-color: #1574F6;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #1574F6;
+}
+
+@media only screen and (max-width: 992px) {
+  .body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=App.css.map */
