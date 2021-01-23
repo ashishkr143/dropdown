@@ -9,7 +9,7 @@ import Right from './component/Right'
 
 class App extends React.Component{
   state = {
-    
+    products : []
   }
   toggleMenu = ()=>{
       this.setState({showMenu : !this.state.showMenu})
@@ -30,6 +30,20 @@ class App extends React.Component{
       .catch(err=>console.log(err))
     })
     .catch(err=>console.log(err))
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((result) => {
+      result.json()
+      .then(data=>{
+        this.setState({
+          products : [data[0],data[1],data[2],data[3]]
+        })
+      })
+      .catch(err=>console.log(err))
+    }).catch((err) => {
+      console.log(err)
+    });
+    
   }
   render(){
     return(
@@ -37,7 +51,7 @@ class App extends React.Component{
         <Header></Header>
          <div className="body">
             <Left name={this.state.userName} avatar={this.state.avatar} nickName={this.state.nickName} about={this.state.aboutUser} company={this.state.company}></Left>
-            <Middle></Middle>
+            <Middle products={this.state.products}></Middle>
             <Right></Right>
         </div>
       </Fragment>

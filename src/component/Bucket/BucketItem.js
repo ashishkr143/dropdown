@@ -9,11 +9,11 @@ export class BucketItem extends Component {
                 </div>
                 <div className="content">
                     <div className="top">
-                        <h2>Product Name</h2>
+                        <h2>{this.props.title}</h2>
                         <h6>FINTECH</h6>
                     </div>
                     <p className="dsc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maxime blanditiis culpa obcaecati facere quod delectus facilis corporis, quos sequi minima repellendus at eveniet optio totam harum error
+                    {this.props.dsc}
                     </p>
                     <div className="bottom">
                         <div> <i className="fa fa-comments"></i> <span>0 Comments</span> </div>

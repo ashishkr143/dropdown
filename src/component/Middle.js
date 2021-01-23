@@ -1,11 +1,12 @@
 import React from 'react'
 import Bucket from './Bucket/Bucket'
 
-export default function Middle() {
+export default function Middle(props) {
     return (
+        
         <div className="middle">
             <h1>My Bucket</h1>
-            <Bucket></Bucket>
+            <Bucket products={props.products}></Bucket>
         </div>
     )
 }

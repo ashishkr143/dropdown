@@ -4,10 +4,9 @@ export class Bucket extends Component {
     render() {
         return (
             <div className="bucket">
-                <BucketItem></BucketItem>
-                <BucketItem></BucketItem>
-                <BucketItem></BucketItem>
-                <BucketItem></BucketItem>
+                {this.props.products.map(product => {
+                   return <BucketItem title={product.title} dsc={product.body} ></BucketItem>
+                })}
             </div>
         )
     }
