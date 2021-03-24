@@ -5,7 +5,7 @@ export class Bucket extends Component {
         return (
             <div className="bucket">
                 {this.props.products.map(product => {
-                   return <BucketItem title={product.title} dsc={product.body} ></BucketItem>
+                   return <BucketItem title={product.title} dsc={product.dsc} img={product.image} url={product.url} ></BucketItem>
                 })}
             </div>
         )

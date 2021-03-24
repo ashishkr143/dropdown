@@ -31,18 +31,20 @@ class App extends React.Component{
     })
     .catch(err=>console.log(err))
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://openapi.worldsofashishpatel.com/api/blogs?api_key=670ab8c41d32f04fd4b6f0d6cae4b140')
     .then((result) => {
       result.json()
       .then(data=>{
+        console.log(data)
         this.setState({
-          products : [data[0],data[1],data[2],data[3]]
+          products : [data[0],data[1],data[2]]
         })
       })
       .catch(err=>console.log(err))
     }).catch((err) => {
       console.log(err)
     });
+
     
   }
   render(){
